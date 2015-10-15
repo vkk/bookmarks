@@ -1,5 +1,5 @@
 // Fixture data 
-if (Posts.find().count() === 0) {
+/* if (Posts.find().count() === 0) {
   var now = new Date().getTime();
   
   // create two users
@@ -69,4 +69,4 @@ if (Posts.find().count() === 0) {
       upvoters: [], votes: 0
     });
   }
-}
+} */

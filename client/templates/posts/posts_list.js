@@ -1,4 +1,4 @@
-Template.postsList.onRendered(function () {
+Template.bookmarksList.onRendered(function () {
   this.find('.wrapper')._uihooks = {
     insertElement: function (node, next) {
       $(node)

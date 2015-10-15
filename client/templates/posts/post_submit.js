@@ -1,8 +1,8 @@
-Template.postSubmit.onCreated(function() {
+Template.addBookmark.onCreated(function() {
   Session.set('postSubmitErrors', {});
 });
 
-Template.postSubmit.helpers({
+Template.addBookmark.helpers({
   errorMessage: function(field) {
     return Session.get('postSubmitErrors')[field];
   },
@@ -11,7 +11,7 @@ Template.postSubmit.helpers({
   }
 });
 
-Template.postSubmit.events({
+Template.addBookmark.events({
   'submit form': function(e) {
     e.preventDefault();
     
@@ -24,7 +24,7 @@ Template.postSubmit.events({
     if (errors.title || errors.url)
       return Session.set('postSubmitErrors', errors);
     
-    Meteor.call('postInsert', post, function(error, result) {
+    Meteor.call('bookmarkInsert', post, function(error, result) {
       // display the error to the user and abort
       if (error)
         return throwError(error.reason);
